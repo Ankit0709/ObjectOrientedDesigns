@@ -3,14 +3,14 @@ package com.ankitkhankriyal.splitwise.model;
 public class User {
     private String id;
     private String name;
+    private String phoneNo;
     private String email;
-    private String phoneNumber;
 
-    public User(String id, String name, String email, String phoneNumber) {
+    public User(String id, String name, String phoneNo, String email) {
         this.id = id;
         this.name = name;
+        this.phoneNo = phoneNo;
         this.email = email;
-        this.phoneNumber = phoneNumber;
     }
 
     public String getId() {
@@ -29,19 +29,19 @@ public class User {
         this.name = name;
     }
 
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
     }
 }

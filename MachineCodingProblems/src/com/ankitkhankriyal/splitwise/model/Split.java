@@ -1,8 +1,8 @@
 package com.ankitkhankriyal.splitwise.model;
 
-public abstract  class Split {
-    User user;
-    double amount;
+public abstract class  Split {
+    User user ;
+    Double amount;
 
     public Split(User user) {
         this.user = user;
@@ -16,11 +16,12 @@ public abstract  class Split {
         this.user = user;
     }
 
-    public double getAmount() {
+    public Double getAmount() {
         return amount;
     }
 
-    public void setAmount(double amount) {
+    public void setAmount(Double amount) {
         this.amount = amount;
     }
+
 }

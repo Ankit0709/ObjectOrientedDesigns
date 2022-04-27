@@ -2,10 +2,9 @@ package com.ankitkhankriyal.splitwise.model;
 
 import java.util.List;
 
-public class PercentExpense extends  Expense{
-
-    public PercentExpense(User paidBy, List<Split> splits, double amount, ExpenseMetaData expenseMetaData) {
-        super(paidBy, splits, amount, expenseMetaData);
+public class PercentExpense  extends  Expense{
+    public PercentExpense( User paidBy, Double amount, List<Split> splits, ExpenseMetaData expenseMetaData) {
+        super(paidBy, amount, splits, expenseMetaData);
     }
 
     @Override
@@ -15,12 +14,12 @@ public class PercentExpense extends  Expense{
                 return false;
             }
         }
-        double totalPercent = 100;
-        double percent=0;
-        for(Split split : getSplits()){
+        Double totalPer=100.00;
+        Double percent=0.0;
+        for(Split split:getSplits()) {
             PercentSplit percentSplit = (PercentSplit) split;
-            percent += percentSplit.getPercentage();
+            percent+=percentSplit.getPercentage();
         }
-        return percent==totalPercent;
+        return percent==totalPer;
     }
 }

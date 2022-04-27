@@ -1,17 +1,17 @@
 package com.ankitkhankriyal.splitwise.model;
 
 public class PercentSplit extends  Split{
-    double percentage;
-    public PercentSplit(User user,double percentage) {
+    Double percentage;
+    public PercentSplit(User user,Double percentage) {
         super(user);
         this.percentage=percentage;
     }
 
-    public double getPercentage() {
+    public Double getPercentage() {
         return percentage;
     }
 
-    public void setPercentage(double percentage) {
+    public void setPercentage(Double percentage) {
         this.percentage = percentage;
     }
 }

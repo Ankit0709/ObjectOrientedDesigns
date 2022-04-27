@@ -5,14 +5,14 @@ import java.util.List;
 public abstract class Expense {
     private String id;
     private User paidBy;
+    private Double amount;
     private List<Split> splits;
-    private double amount;
     private ExpenseMetaData expenseMetaData;
 
-    public Expense(User paidBy, List<Split> splits, double amount, ExpenseMetaData expenseMetaData) {
-        this.paidBy = paidBy;
-        this.splits = splits;
+    public Expense(User paidBy, Double amount, List<Split> splits, ExpenseMetaData expenseMetaData) {
+         this.paidBy = paidBy;
         this.amount = amount;
+        this.splits = splits;
         this.expenseMetaData = expenseMetaData;
     }
 
@@ -32,20 +32,20 @@ public abstract class Expense {
         this.paidBy = paidBy;
     }
 
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
     public List<Split> getSplits() {
         return splits;
     }
 
     public void setSplits(List<Split> splits) {
         this.splits = splits;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
     }
 
     public ExpenseMetaData getExpenseMetaData() {
